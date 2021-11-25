@@ -3,7 +3,7 @@ import Foundation
 public class SimpleLogger: Logger {
     private(set) var level: LogLevel
     
-    init(level: LogLevel) {
+    public init(level: LogLevel) {
         self.level = level
     }
     
