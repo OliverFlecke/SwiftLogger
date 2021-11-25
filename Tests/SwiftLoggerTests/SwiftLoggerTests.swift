@@ -3,9 +3,8 @@ import XCTest
 
 final class SwiftLoggerTests: XCTestCase {
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(SwiftLogger().text, "Hello, World!")
+        let logger = SimpleLogger(level: .info)
+        
+        XCTAssertTrue(logger.format(level: .warning, message: "Hello world").contains(" [⚠️] Hello world"))
     }
 }
